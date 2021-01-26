@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jan 26 16:52:54 2021
+
+@author: sswoo
+"""
+
 # Copyright (c) 2019, NVIDIA Corporation. All rights reserved.
 #
 # This work is made available under the Nvidia Source Code License-NC.
@@ -197,20 +204,21 @@ def create_dataset(dataset, resolution=None):
         return create_from_lmdb(data_dir, resolution)
     
     if dataset in predefined_datasets:
-        unzip_from_url(data_dir, 'https://hanlab.mit.edu/projects/data-efficient-gans/datasets/{}.zip'.format(dataset))
+        unzip_from_url(data_dir, 'https://drive.google.com/drive/folders/1ufYywWQ-ZJLYIMn8T8iUdx5uSoHUSpUg?usp=sharing/{}.zip'.format(dataset))
     return create_from_images(data_dir, resolution)
 
 
 predefined_datasets = [
     '100-shot-obama',
-    '100-shot-grumpy_cat',
-    '100-shot-panda',
-    '100-shot-bridge_of_sighs',
-    '100-shot-medici_fountain',
-    '100-shot-temple_of_heaven',
-    '100-shot-wuzhen',
-    'AnimalFace-cat',
-    'AnimalFace-dog',
+    #'100-shot-grumpy_cat',
+    #'100-shot-panda',
+    #'100-shot-bridge_of_sighs',
+    #'100-shot-medici_fountain',
+    #'100-shot-temple_of_heaven',
+    #'100-shot-wuzhen',
+    #'AnimalFace-cat',
+    #'AnimalFace-dog',
+    'cutout_res',
 ]
 
 # ----------------------------------------------------------------------------
